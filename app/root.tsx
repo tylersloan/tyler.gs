@@ -9,6 +9,7 @@ import {
 import { SpeedInsights } from '@vercel/speed-insights/remix';
 import { Analytics } from '@vercel/analytics/react';
 import stylesheet from '~/tailwind.css?url';
+import hireMeJpg from './assets/hire-me.jpeg';
 
 export const links = () => {
   return [{ rel: 'stylesheet', href: stylesheet }];
@@ -16,11 +17,23 @@ export const links = () => {
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
+
   return (
     <html lang='en'>
       <head>
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='og:title' content='Tyler Sloan for Hire' />
+        <meta name='og:image' content={hireMeJpg} />
+        <meta name='og:site_name' content='Tyler Sloan | Software Engineer' />
+        <meta name='og:url' content='https://tyler.gs' />
+        <meta name='og:type' content='website' />
+        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:site' content='@tylergs_' />
+        <meta name='twitter:creator' content='@tylergs_' />
+        <meta name='twitter:title' content='Tyler Sloan for Hire' />
+        <meta name='twitter:image' content={hireMeJpg} />
+
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
           rel='preconnect'
