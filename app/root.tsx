@@ -6,6 +6,8 @@ import {
   ScrollRestoration,
   useLocation,
 } from '@remix-run/react';
+import { SpeedInsights } from '@vercel/speed-insights/remix';
+import { Analytics } from '@vercel/analytics/react';
 import stylesheet from '~/tailwind.css?url';
 
 export const links = () => {
@@ -29,11 +31,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
           href='https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap'
           rel='stylesheet'
         />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'
-          rel='stylesheet'
-        />
-
         <Meta />
         <Links />
       </head>
@@ -112,6 +109,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </a>
             </li>
           </ul>
+          <Analytics />
+          <SpeedInsights />
           <ScrollRestoration />
           <Scripts />
         </main>
