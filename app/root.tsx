@@ -58,7 +58,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </h2>
           </header>
           {children}
-          <ul className='flex gap-4 mt-12 items-center border-t-2 border-slate-700 pt-12'>
+          <ul className='flex gap-4 mt-12 items-center border-t-2 border-neutral-700 pt-12'>
             <li>
               <a
                 className='text-neutral-300 hover:text-neutral-100'
