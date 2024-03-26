@@ -1,14 +1,30 @@
+import { MetaFunction } from '@remix-run/node';
+import resumePdf from '../assets/Tyler_Sloan__Senior_Software_Engineer__Resume.pdf';
+
 function SectionHeader({ text }) {
   return <h3 className='text-xl inline-block border-b-2 pb-2 mb-6'>{text}</h3>;
 }
 
+export const meta: MetaFunction = () => {
+  return [
+    { title: 'Tyler Sloan | Resume' },
+    { name: 'description', content: 'Tyler Sloan, Software Engineer, Resume' },
+  ];
+};
+
 export default function Resume() {
   return (
     <>
-      <section>
+      <section className='flex justify-between items-start'>
         <h3 className='text-3xl  border-b-neutral-700 border-b-2 pb-2 mb-6'>
-          Resume
+          Resumé
         </h3>
+        <a
+          href={resumePdf}
+          className='text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-md text-sm px-5 py-2.5 dark:bg-neutral-800 dark:text-white dark:border-neutral-600 dark:hover:bg-neutral-700 dark:hover:border-neutral-600 dark:focus:ring-gray-700'
+        >
+          Download Resumé
+        </a>
       </section>
       <section className='mt-4'>
         <SectionHeader text='Summary' />

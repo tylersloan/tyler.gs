@@ -10,6 +10,8 @@ import { SpeedInsights } from '@vercel/speed-insights/remix';
 import { Analytics } from '@vercel/analytics/react';
 import stylesheet from '~/tailwind.css?url';
 import hireMeJpg from './assets/hire-me.jpeg';
+import faviconSvg from './assets/favicon.svg';
+import faviconPng from './assets/favicon.png';
 
 export const links = () => {
   return [{ rel: 'stylesheet', href: stylesheet }];
@@ -33,7 +35,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name='twitter:creator' content='@tylergs_' />
         <meta name='twitter:title' content='Tyler Sloan for Hire' />
         <meta name='twitter:image' content={hireMeJpg} />
-
+        <link rel='icon' type='image/svg+xml' href={faviconSvg} />
+        <link rel='icon' type='image/png' href={faviconPng} />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
           rel='preconnect'
@@ -118,7 +121,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 className='text-neutral-300 hover:text-neutral-100'
                 href={location.pathname === '/resume' ? '/' : '/resume'}
               >
-                {location.pathname === '/resume' ? 'Home' : 'Resume'}
+                {location.pathname === '/resume' ? 'Home' : 'Resumé'}
               </a>
             </li>
           </ul>
