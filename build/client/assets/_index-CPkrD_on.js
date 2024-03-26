@@ -1,0 +1,1 @@
+import{j as e}from"./jsx-runtime-BlSqMCxk.js";const o=()=>[{title:"New Remix SPA"},{name:"description",content:"Welcome to Remix (SPA Mode)!"}];function n(){return e.jsx("div",{children:"cool page"})}export{n as default,o as meta};
